@@ -10,6 +10,12 @@
 
 ############ IDF BUILDING #########################
 
+To allow the ESP to run in SoftAP mode and host a local network:
+     #Call idf.py menuconfig
+     #Navigate to HTTP Server
+     #Enable Websockets
+     #Save and Apply
+
 # to create a new idf project for ESP32:
  idf.py create-project capstone
 
