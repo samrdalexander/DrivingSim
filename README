@@ -1,0 +1,15 @@
+# to create a new idf project:
+ idf create-project capstone
+
+# copy in the capstone.c and my_data.h files into capston/main
+
+# add a dep
+idf add-dependency "espressif/esp_websocket_client^1.0.0"
+
+# build
+idf build
+
+# flash and monitor
+idf flash monitor
+
+Ctrl]
