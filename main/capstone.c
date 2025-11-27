@@ -48,8 +48,6 @@ static const char *WS_TAG = "websocket";
 
 #define IP "ws://10.141.12.4:8765" //This changes depending on hotspot used (ipconfig on local Laptop)
 
-#include "my_data.h"
-
 // Queue handle for passing SPI data (each item is an array of MESSAGE_SIZE bytes)
 QueueHandle_t spiQueue;
 
@@ -396,4 +394,5 @@ void app_main(void)
 
     // 4. Create the WebSocket task
     xTaskCreate(websocket_task, "websocket_task", 8192, NULL, 5, NULL);
+
 }
