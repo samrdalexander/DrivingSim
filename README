@@ -1,15 +1,27 @@
-# to create a new idf project:
- idf create-project capstone
+########## INSTRUCTIONS #########################
 
-# copy in the capstone.c and my_data.h files into capston/main
+1. The ESP 32 runs a local Wi-Fi connection as a Soft-Access Point called DrivingSim. Connect to this.
+
+2. The ESP should start sending 16-byte packets over a websocket on the network.
+
+3. Open the JS front-end using LiveServer or similar in vsCode.
+
+4. You should see the frontend connect and start displaying values.
+
+############ IDF BUILDING #########################
+
+# to create a new idf project for ESP32:
+ idf.py create-project capstone
+
+# copy in the capstone.c into main/
 
 # add a dep
-idf add-dependency "espressif/esp_websocket_client^1.0.0"
+idf.py add-dependency "espressif/esp_websocket_client^1.0.0"
 
 # build
-idf build
+idf.py build
 
 # flash and monitor
-idf flash monitor
+idf.py flash monitor -p [COM#]
 
-Ctrl]
+Ctrl + ] to kill
