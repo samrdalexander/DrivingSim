@@ -158,7 +158,7 @@ function handleWebSocketBytes(byteArray) {
   const reverse = byteArray[4];
   const rpm = byteArray[5] * 100;
   const driveMode = byteArray[6];
-  const slopePercentage = (byteArray[7] / 100).toFixed(2) * -1; // Convert slope to percentage
+  const slopePercentage = (byteArray[7] / 100).toFixed(2); // Convert slope to percentage
   const message = byteArray
   .slice(8)
   .map((b) => (b === 0 ? "" : String.fromCharCode(b)))
